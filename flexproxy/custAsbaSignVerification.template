@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input Service="YesCustomerManagerService" Operation="custAsbaSignVerification(SessionContext,String,long,String)">
+ <SessionContext>
+  <SupervisorContext>
+   <PrimaryPassword></PrimaryPassword>
+   <UserId></UserId>
+  </SupervisorContext>
+  <BankCode>240</BankCode>
+  <Channel>FCDB</Channel>
+  <ExternalBatchNumber></ExternalBatchNumber>
+  <ExternalReferenceNo>Anirudh5223</ExternalReferenceNo>
+  <ExternalSystemAuditTrailNumber></ExternalSystemAuditTrailNumber>
+  <LocalDateTimeText></LocalDateTimeText>
+  <OriginalReferenceNo></OriginalReferenceNo>
+  <UserReferenceNumber></UserReferenceNumber>
+  <OverridenWarnings></OverridenWarnings>
+  <PostingDateText></PostingDateText>
+  <ServiceCode>345</ServiceCode>
+  <SessionTicket></SessionTicket>
+  <TransactionBranch>240</TransactionBranch>
+  <UserId>SYSTELLER</UserId>
+  <ValueDateText></ValueDateText>
+ </SessionContext>
+<CustomerId>605277</CustomerId>  
+<AccountNo>50100000000060</AccountNo>
+<ExtUniqueRefId>11</ExtUniqueRefId>
+ </input>
