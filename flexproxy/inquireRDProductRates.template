@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input Operation="inquireRDProductRates(SessionContext,double,String,String,String,long)" Service="YesRecurringDemandDepositManagerService">
+	<SessionContext>
+		<SupervisorContext>
+			<PrimaryPassword></PrimaryPassword>
+			<UserId></UserId>
+		</SupervisorContext>
+		<BankCode>532</BankCode>
+		<Channel></Channel>
+		<ExternalBatchNumber></ExternalBatchNumber>
+		<ExternalReferenceNo></ExternalReferenceNo>
+		<ExternalSystemAuditTrailNumber></ExternalSystemAuditTrailNumber>
+		<LocalDateTimeText></LocalDateTimeText>
+		<OriginalReferenceNo></OriginalReferenceNo>
+		<OverridenWarnings></OverridenWarnings>
+		<PostingDateText></PostingDateText>
+		<ServiceCode></ServiceCode>
+		<SessionTicket></SessionTicket>
+		<TransactionBranch>999</TransactionBranch>
+		<UserId>SYSTEM01</UserId>
+		<UserReferenceNumber>NEFT266140332850</UserReferenceNumber>
+		<ValueDateText></ValueDateText>
+	</SessionContext>
+	<ExtUniqueRefId>1234</ExtUniqueRefId>
+	<CustomerId>1793143</CustomerId>
+	<TermMonths>10</TermMonths>
+</input>

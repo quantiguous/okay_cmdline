@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input Operation="inquireTDProductRates(SessionContext,double,String,String,String,long)" Service="YesTermDepositAccountManagerService">
+	<SessionContext>
+		<SupervisorContext>
+			<PrimaryPassword></PrimaryPassword>
+			<UserId></UserId>
+		</SupervisorContext>
+		<BankCode>532</BankCode>
+		<Channel>BRN</Channel>
+		<ExternalBatchNumber></ExternalBatchNumber>
+		<ExternalReferenceNo></ExternalReferenceNo>
+		<ExternalSystemAuditTrailNumber></ExternalSystemAuditTrailNumber>
+		<LocalDateTimeText></LocalDateTimeText>
+		<OriginalReferenceNo></OriginalReferenceNo>
+		<OverridenWarnings></OverridenWarnings>
+		<PostingDateText></PostingDateText>
+		<ServiceCode></ServiceCode>
+		<SessionTicket></SessionTicket>
+		<TransactionBranch>999</TransactionBranch>
+		<UserId>MOBUSER</UserId>
+		<UserReferenceNumber>NEFT266140332850</UserReferenceNumber>
+		<ValueDateText></ValueDateText>
+	</SessionContext>
+	<ExtUniqueRefId>1234</ExtUniqueRefId>
+	<CustomerId>115558</CustomerId>
+	<ProductCode>405</ProductCode>
+	<TermMonths>15</TermMonths>
+	<TermDays></TermDays>
+	<Amount>10000</Amount>
+</input>

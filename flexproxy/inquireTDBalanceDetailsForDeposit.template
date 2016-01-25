@@ -1,0 +1,24 @@
+<input Service="YesExtMobileService" Operation="inquireTDBalanceDetailsForDeposit( SessionContext, String)">
+	<SessionContext>
+		<BankCode>532</BankCode>
+		<Channel>BRN</Channel>
+		<ExternalBatchNumber></ExternalBatchNumber>
+		<ExternalReferenceNo>15422054</ExternalReferenceNo>		
+		<ExternalSystemAuditTrailNumber></ExternalSystemAuditTrailNumber>
+		<LocalDateTimeText></LocalDateTimeText>
+		<OriginalReferenceNo></OriginalReferenceNo>
+		<OverridenWarnings></OverridenWarnings>
+		<PostingDateText></PostingDateText>
+		<ServiceCode>316</ServiceCode>
+		<SessionTicket></SessionTicket>
+		<TransactionBranch>8888</TransactionBranch>
+		<UserId>SYSTELLER</UserId>
+		<ValueDateText></ValueDateText>
+		<SupervisorContext>
+			<PrimaryPassword></PrimaryPassword>
+		</SupervisorContext>
+	</SessionContext>
+	<AccountNumber>200300000010451</AccountNumber>
+	<DepositNumber>1</DepositNumber>	
+	<ExtUniqueRefId>1</ExtUniqueRefId>
+</input>

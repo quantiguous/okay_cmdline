@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <input Service="YesRemittanceManagerService" Operation="inquireCASAChequeStatus( SessionContext, String, String)">
+  <SessionContext>
+  <BankCode>532</BankCode> 
+  <Channel /> 
+  <ExternalBatchNumber /> 
+  <ExternalReferenceNo /> 
+  <ExternalSystemAuditTrailNumber /> 
+  <LocalDateTimeText /> 
+  <OriginalReferenceNo /> 
+  <OverridenWarnings /> 
+  <PostingDateText /> 
+  <ServiceCode /> 
+  <SessionTicket /> 
+  <TransactionBranch>777</TransactionBranch> 
+  <UserId>ESBUSER</UserId> 
+  <ValueDateText /> 
+  <SupervisorContext>
+  <PrimaryPassword /> 
+  </SupervisorContext>
+  </SessionContext>
+  <ChequeNumber>000000000001</ChequeNumber> 
+  <AccountNumber>000390100000101</AccountNumber> 
+  <ExtUniqueRefId>2132</ExtUniqueRefId> 
+  </input>
+
