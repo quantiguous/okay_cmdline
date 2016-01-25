@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<input Service="YesDemandDepositManagerService" Operation="inquireCustomerAccount( SessionContext, String)">
+                <SessionContext>
+                                <SupervisorContext>
+                                                <PrimaryPassword></PrimaryPassword>
+                                                <UserId></UserId>
+                                </SupervisorContext>
+                                <BankCode>532</BankCode>
+                                <Channel>BRN</Channel>
+                                <ExternalBatchNumber></ExternalBatchNumber>
+                                <ExternalReferenceNo>12345</ExternalReferenceNo>
+                                <ExternalSystemAuditTrailNumber></ExternalSystemAuditTrailNumber>
+                                <LocalDateTimeText></LocalDateTimeText>
+                                <OriginalReferenceNo></OriginalReferenceNo>
+                                <OverridenWarnings></OverridenWarnings>
+                                <PostingDateText></PostingDateText>
+                                <ServiceCode></ServiceCode>
+                                <SessionTicket></SessionTicket>
+                                <TransactionBranch>906</TransactionBranch>
+                                <UserId>MOBUSER</UserId>
+                                <ValueDateText></ValueDateText>
+                </SessionContext>
+                <CustomerId>115558</CustomerId>
+                <PageNumber></PageNumber>
+                <TotalRecordPage></TotalRecordPage>
+                <ExtUniqueRefId>1234</ExtUniqueRefId>
+</input>
