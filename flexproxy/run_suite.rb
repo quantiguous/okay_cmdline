@@ -1,6 +1,8 @@
 require 'liquid'
 require 'securerandom'
 require 'faraday'
+require 'equivalent-xml'
+require 'nokogiri'
 
 URL = 'https://uatsky.yesbank.in:7081/V3/flexcube'
 
@@ -73,11 +75,16 @@ def run
   # one request with query
   rep2 = send_request(render_template(template), true)
 
-  if rep1.delete!('\n') != rep2.delete!('\n')
-    p 'mismatch'
+  node_1 = Nokogiri::XML(rep1)
+  node_2 = Nokogiri::XML(rep2)
+
+  if EquivalentXml.equivalent?(node_1, node_2, opts = { :element_order => true }) == true 
+    p 'matched'
   else
-    p 'match'
-  end 
+    p 'not mached'
+    p rep1
+    p rep2
+  end
 
   return
 end
