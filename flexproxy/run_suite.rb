@@ -37,8 +37,11 @@ def load_template
   return Liquid::Template.parse(File.read(API_UNDER_TEST + '.template'))
 end
 
-def render_template(template)
-  return template.render
+def load_data
+  p 'loading data'
+  return File.readlines(API_UNDER_TEST + '.data')
+rescue Errno::ENOENT
+  return nil
 end
 
 
@@ -66,14 +69,12 @@ def send_request(template, query = nil)
     return response.body
 end
 
-def run
-  template = load_template
-  
+def compare_run(req)
   # one request without query
-  rep1 = send_request(render_template(template))
+  rep1 = send_request(req)
 
   # one request with query
-  rep2 = send_request(render_template(template), true)
+  rep2 = send_request(req, true)
 
   node_1 = Nokogiri::XML(rep1)
   node_2 = Nokogiri::XML(rep2)
@@ -85,8 +86,29 @@ def run
     p rep1
     p rep2
   end
+end
 
-  return
+def run_with_data(template, data_set)
+  data_header = data_set.shift
+  data_header.delete!("\n")
+
+  data_set.each_with_index { |data,i| 
+     puts "case : #{i+1}: #{data}"
+     data.delete!("\n")
+     
+     req = template.render(data_header => data)
+     compare_run(req)
+  }
+end
+
+def run
+  template = load_template
+  data_set = load_data
+  if data_set.nil?
+    compare_run(template.render)
+  else
+    run_with_data(template, data_set)
+  end
 end
 
 run

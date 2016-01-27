@@ -1,1 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><input Operation="inquireTDAccounts( SessionContext, String)" Service="YesTermDepositManagerService"><CustomerId>304</CustomerId><ExtUniqueRefId>1447846763386</ExtUniqueRefId><TotalRecordPage/><PageNumber/><SessionContext><SupervisorContext><PrimaryPassword/></SupervisorContext><BankCode>532</BankCode><Channel>BRN</Channel><ExternalBatchNumber/><ExternalReferenceNo/><ExternalSystemAuditTrailNumber/><LocalDateTimeText/><OriginalReferenceNo/><OverridenWarnings/><PostingDateText/><ServiceCode/><UserReferenceNumber/><SessionTicket/><TransactionBranch>0777</TransactionBranch><UserId>MOBUSER</UserId><ValueDateText/></SessionContext></input>
+<?xml version="1.0" encoding="UTF-8"?>
+<input Operation="inquireTDAccounts( SessionContext, String)" Service="YesTermDepositManagerService">
+    <CustomerId>304</CustomerId>
+    <ExtUniqueRefId>1447846763386</ExtUniqueRefId>
+    <TotalRecordPage />
+    <PageNumber />
+    <SessionContext>
+        <SupervisorContext>
+            <PrimaryPassword />
+        </SupervisorContext>
+        <BankCode>532</BankCode>
+        <Channel>BRN</Channel>
+        <ExternalBatchNumber />
+        <ExternalReferenceNo />
+        <ExternalSystemAuditTrailNumber />
+        <LocalDateTimeText />
+        <OriginalReferenceNo />
+        <OverridenWarnings />
+        <PostingDateText />
+        <ServiceCode />
+        <UserReferenceNumber />
+        <SessionTicket />
+        <TransactionBranch>0777</TransactionBranch>
+        <UserId>MOBUSER</UserId>
+        <ValueDateText />
+    </SessionContext>
+</input>

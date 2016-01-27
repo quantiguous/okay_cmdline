@@ -20,7 +20,7 @@
                                 <UserId>MOBUSER</UserId>
                                 <ValueDateText></ValueDateText>
                 </SessionContext>
-                <CustomerId>115558</CustomerId>
+                <CustomerId>{{ COD_CUST_ID }}</CustomerId>
                 <PageNumber></PageNumber>
                 <TotalRecordPage></TotalRecordPage>
                 <ExtUniqueRefId>1234</ExtUniqueRefId>
