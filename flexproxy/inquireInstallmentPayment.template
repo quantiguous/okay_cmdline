@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+ <input Operation="inquireInstallmentPayment(SessionContext,double,String,String,String,long)" Service="YesRecurringDemandDepositManagerService">
+ <SessionContext>
+<SupervisorContext>
+  <PrimaryPassword /> 
+  <UserId /> 
+  </SupervisorContext>
+  <BankCode>532</BankCode> 
+  <Channel /> 
+  <ExternalBatchNumber /> 
+  <ExternalReferenceNo /> 
+  <ExternalSystemAuditTrailNumber /> 
+  <LocalDateTimeText /> 
+  <OriginalReferenceNo /> 
+  <OverridenWarnings /> 
+  <PostingDateText /> 
+  <ServiceCode /> 
+  <SessionTicket /> 
+  <TransactionBranch>999</TransactionBranch> 
+  <UserId>SYSTEM01</UserId> 
+  <UserReferenceNumber>NEFT266140332850</UserReferenceNumber> 
+  <ValueDateText /> 
+  </SessionContext>
+  <ExtUniqueRefId>12334</ExtUniqueRefId> 
+  <AccountNumber>1274843738</AccountNumber> 
+  <CustomerID>1234</CustomerID> 
+  </input>
