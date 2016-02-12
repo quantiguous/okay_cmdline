@@ -1,0 +1,6 @@
+POST, /inyes/v1/users
+POST, /inyes/v1/oauth/request/token
+POST, /inyes/v1/oauth/access/token
+PUT, /inyes/v1/users
+PUT, /inyes/v1/users/addresses/residential
+POST, /inyes/v1/users/wallets/cards/ybyespaycard
