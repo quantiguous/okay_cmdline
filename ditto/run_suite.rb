@@ -16,8 +16,8 @@ end
 
 
 def set_headers(req, uri, delay)
-   req.headers['Content-Type'] = 'application/xml'
-   req.headers['Accept'] = 'application/xml'
+   req.headers['Content-Type'] = 'application/x-www-form-urlencoded'
+   #req.headers['Accept'] = 'application/xml'
    req.headers['X-QG-CI-SVC'] = X_QG_CI_SVC
    unless uri.nil?
      req.headers['X-QG-CI-URI'] = uri

@@ -2,15 +2,18 @@ require 'liquid'
 require 'securerandom'
 require 'faraday'
 
-URL = 'http://9363410d.ngrok.io/IMTService'
 
-APPID = ARGV[1]
+APPID = ARGV[2]
 APPID = 'APP12' if APPID.nil? or APPID == ''
 p APPID
 
-SERVICE_NAME = 'IMTService'
 
-SYSTEM_UNDER_TEST = ARGV[0]
+SERVICE_NAME = ARGV[0]
+OPERATION_NAME = ARGV[1]
+
+URL = 'http://10.211.55.5:7080/' + SERVICE_NAME
+
+FILE_NAME = SERVICE_NAME + '_' + OPERATION_NAME
 
 DELAY = 35
 
@@ -30,24 +33,27 @@ end
 
 Liquid::Template.register_tag('uuid', UUID)
 
-
-
 def generate_urn
   return SecureRandom.uuid.gsub('-','').upcase
 end
 
 def load_template
   p 'loading template'
-  return Liquid::Template.parse(File.read(SYSTEM_UNDER_TEST + '.template'))
+  return Liquid::Template.parse(File.read(FILE_NAME + '.template'))
 end
 
 def render_template(template)
-  return template.render('appid' => APPID)
+  return template.render(
+        {
+            'appid' => APPID,
+            'mobileNo' => Time.now.to_i 
+        }
+  )
 end
 
 def load_steps
   p 'loading steps'
-  return File.readlines(SYSTEM_UNDER_TEST + '.steps')
+  return File.readlines(FILE_NAME + '.steps')
 end
 
 
