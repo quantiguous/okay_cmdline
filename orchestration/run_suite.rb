@@ -46,7 +46,8 @@ def render_template(template)
   return template.render(
         {
             'appid' => APPID,
-            'mobileNo' => Time.now.to_i 
+            'mobileNo' => Time.now.to_i,
+            'idDocumentNo' => Time.now.to_i
         }
   )
 end
@@ -91,6 +92,7 @@ def run
   
   # one happy request
   send_request(render_template(template))
+return
 
   uris.each do |uri|
     # one sad request per step

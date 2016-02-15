@@ -15,7 +15,7 @@
          <ser:birthDate>1993-11-16</ser:birthDate>
          <ser:idDocument>
             <ser:documentType>passport</ser:documentType>
-            <ser:documentNo>123456689</ser:documentNo>
+            <ser:documentNo>{{idDocumentNo}}</ser:documentNo>
             <ser:countryOfIssue>india</ser:countryOfIssue>
          </ser:idDocument>
          <ser:address>
@@ -26,7 +26,7 @@
             <ser:country>india</ser:country>
             <ser:postalCode>222002</ser:postalCode>
          </ser:address>
-         <ser:proxyCardNumber>123123123</ser:proxyCardNumber>
+         <ser:proxyCardNumber>PY000000014340</ser:proxyCardNumber>
       </ser:registerCard>
    </soap:Body>
 </soap:Envelope>
