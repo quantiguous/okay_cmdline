@@ -1,0 +1,6 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+   <ser:blockCard xmlns:ser="http://www.quantiguous.com/services"><ser:version>1</ser:version><ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo><ser:appID>{{appid}}</ser:appID><ser:mobileNo>1455534654</ser:mobileNo></ser:blockCard>
+   </soap:Body>
+</soap:Envelope>
