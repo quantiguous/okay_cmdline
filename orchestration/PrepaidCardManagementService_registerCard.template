@@ -26,7 +26,7 @@
             <ser:country>india</ser:country>
             <ser:postalCode>222002</ser:postalCode>
          </ser:address>
-         <ser:proxyCardNumber>PY000000020016</ser:proxyCardNumber>
+         <ser:proxyCardNumber>PY000000020018</ser:proxyCardNumber>
       </ser:registerCard>
    </soap:Body>
 </soap:Envelope>

@@ -1,0 +1,12 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:getCardDetail>
+         <ser:version>1</ser:version>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:cardUID>228c60a894313f7da7d36f751d018860</ser:cardUID>
+         <ser:emailID>1455612741@quantiguous.com</ser:emailID>
+         <ser:password>824EF987BE5C4B74800FE5E0FF5E6A8D</ser:password>
+      </ser:getCardDetail>
+   </soap:Body>
+</soap:Envelope>
