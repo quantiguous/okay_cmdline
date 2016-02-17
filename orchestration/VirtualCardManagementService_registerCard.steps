@@ -1,0 +1,6 @@
+/inyes/v1/users
+/inyes/v1/oauth/request/token
+/inyes/v1/oauth/access/token
+/inyes/v1/users/put
+/inyes/v1/users/addresses/residential
+/inyes/v1/users/wallets/cards/ybyespaycard

@@ -1,0 +1,14 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:loadCard>
+         <ser:version>1</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:customerID>2424</ser:customerID>
+         <ser:debitAccountNo>000190600002003 </ser:debitAccountNo>
+         <ser:mobileNo>8976613173</ser:mobileNo>
+         <ser:loadAmount>100</ser:loadAmount>
+      </ser:loadCard>
+   </soap:Body>
+</soap:Envelope>
