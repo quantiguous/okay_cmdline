@@ -12,7 +12,7 @@ SERVICE_NAME = ARGV[0]
 OPERATION_NAME = ARGV[1]
 STEP_NO = ARGV[3].to_i
 
-URL = 'http://10.211.55.5:7080/' + SERVICE_NAME
+URL = 'http://10.211.55.9:7080/' + SERVICE_NAME
 
 FILE_NAME = SERVICE_NAME + '_' + OPERATION_NAME
 
@@ -48,7 +48,8 @@ def render_template(template)
         {
             'appid' => APPID,
             'mobileNo' => Time.now.to_i,
-            'idDocumentNo' => Time.now.to_i
+            'idDocumentNo' => Time.now.to_i,
+            'emailID' => Time.now.to_i.to_s + '@quantiguous.com'
         }
   )
 end

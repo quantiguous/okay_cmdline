@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:blockCard>
+         <ser:version>1</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:userUID>e090d22feb9e28ffeb5ddc6805d84b45</ser:userUID>
+         <ser:emailID>nehaupadhya61y@gmail.com</ser:emailID>
+         <ser:password>bnmkj123</ser:password>
+      </ser:blockCard>
+   </soap:Body>
+</soap:Envelope>
+
+

@@ -1,0 +1,28 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:registerCard>
+         <ser:version>1</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:title>Miss</ser:title>
+         <ser:firstName>Neha</ser:firstName>
+         <ser:lastName>Upadhyay</ser:lastName>
+         <ser:preferredName>nehaupadhyay</ser:preferredName>
+         <ser:mobileNo>{{mobileNo}}</ser:mobileNo>
+         <ser:gender>female</ser:gender>
+         <ser:nationality>india</ser:nationality>
+         <ser:birthDate>1993-11-16</ser:birthDate>
+         <ser:address>
+            <ser:addressLine1>102A</ser:addressLine1>
+            <ser:addressLine2>Malad West</ser:addressLine2>
+            <ser:city>MUmbai</ser:city>
+            <ser:state>Maharastra</ser:state>
+            <ser:country>india</ser:country>
+            <ser:postalCode>222002</ser:postalCode>
+         </ser:address>
+         <ser:emailID>{{emailID}}</ser:emailID>
+         <ser:password>neha1993</ser:password>
+      </ser:registerCard>
+   </soap:Body>
+</soap:Envelope>
