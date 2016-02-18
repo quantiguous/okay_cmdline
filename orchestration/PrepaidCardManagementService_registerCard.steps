@@ -1,7 +1,7 @@
-/inyes/v1/users
-/inyes/v1/oauth/request/token
-/inyes/v1/oauth/access/token
-/inyes/v1/users/put
-/inyes/v1/users/addresses/residential
-/inyes/v1/users/wallets/cards/ybyespaycard
-/inyes/v1/users/wallets/cards
+POST, /inyes/v1/users
+POST, /inyes/v1/oauth/request/token
+POST, /inyes/v1/oauth/access/token
+PUT, /inyes/v1/users
+PUT, /inyes/v1/users/addresses/residential
+POST, /inyes/v1/users/wallets/cards/ybyespaycard
+PUT, /inyes/v1/users/wallets/cards

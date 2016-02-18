@@ -4,24 +4,26 @@ require 'faraday'
 
 URL = 'http://ditto.quantiguous.com'
 
-X_QG_CI_SVC = ARGV[0]
-VERBOSE = ARGV[1]
+SERVICE_NAME = ARGV[0]
+OPERATION_NAME = ARGV[1]
+VERBOSE = ARGV[2]
 
 DELAY = 35
 
 def load_steps
   p 'loading steps'
-  return File.readlines(X_QG_CI_SVC + '.steps')
+  return File.readlines(SERVICE_NAME + '_' + OPERATION_NAME + '.steps')
 end
 
 
-def set_headers(req, uri, delay)
+def set_headers(req, uri, delay, method)
    req.headers['Content-Type'] = 'application/x-www-form-urlencoded'
    #req.headers['Accept'] = 'application/xml'
-   req.headers['X-QG-CI-SVC'] = X_QG_CI_SVC
+   req.headers['X-QG-CI-SVC'] = SERVICE_NAME
    unless uri.nil?
      req.headers['X-QG-CI-URI'] = uri
      req.headers['X-QG-CI-SCENARIO'] = 'SAD'
+     req.headers['X-QG-CI-METHOD'] = method.upcase
    end 
    unless delay.nil?
      req.headers['X-QG-CI-DELAY'] = delay.to_s
@@ -34,7 +36,7 @@ def send_request(method, url, step = nil, delay = nil)
       c.use Faraday::Adapter::NetHttp
     end
     response = conn.send(method) do |req|
-       set_headers(req, step, delay)
+       set_headers(req, step, delay, method)
     end
     response
 end
@@ -47,6 +49,7 @@ def run
     uri = step.split(',')[1]
     uri = uri.gsub(/ |\n/,'')
     url = URL + uri
+
     
     # one happy request
     response = send_request(method, url)
