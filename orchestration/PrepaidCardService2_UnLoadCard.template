@@ -1,0 +1,17 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+  <soap:Header/>
+  <soap:Body>
+     <ser:unloadCard>
+        <ser:version>1</ser:version>
+        <ser:appID>{{appid}}</ser:appID>
+        <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+        <ser:customerID>12345678</ser:customerID>
+        <ser:proxyCardNumber>5339830300002285</ser:proxyCardNumber>
+        <ser:creditAccountNo>1234567890</ser:creditAccountNo>
+        <ser:unloadCurrency>INR</ser:unloadCurrency>
+        <ser:unloadAmount>100</ser:unloadAmount>
+        <ser:productType>ABC</ser:productType>
+        <ser:exchangeRate>1</ser:exchangeRate>
+     </ser:unloadCard>
+  </soap:Body>
+</soap:Envelope>
