@@ -3,16 +3,16 @@ require 'securerandom'
 require 'faraday'
 
 
-APPID = ARGV[2]
+APPID = ARGV[3]
 APPID = 'APP12' if APPID.nil? or APPID == ''
 p APPID
 
 
-SERVICE_NAME = ARGV[0]
-OPERATION_NAME = ARGV[1]
-STEP_NO = ARGV[3].to_i
+STEP_NO = ARGV[0].to_i
+SERVICE_NAME = ARGV[1]
+OPERATION_NAME = ARGV[2]
 
-URL = 'http://10.211.55.9:7080/' + SERVICE_NAME
+URL = 'http://10.211.55.5:7800/' + SERVICE_NAME
 
 FILE_NAME = SERVICE_NAME + '_' + OPERATION_NAME
 
@@ -99,25 +99,29 @@ def run
     uris << step.split(',')[1]
   end
 
-  # one happy request
-  send_request(render_template(template))
+  if STEP_NO == 0
+     # one happy request
+     send_request(render_template(template))
   
-  unless STEP_NO.nil?
-    # one sad request
-    send_request(render_template(template), uris[STEP_NO], nil, methods[STEP_NO])
-    # one delay request
-    send_request(render_template(template), uris[STEP_NO], DELAY, methods[STEP_NO])
-  else
-    uris.each_with_index do |uri, index|
-      # one sad request per step
-      send_request(render_template(template), uri, nil, methods[index])
-    end
+     uris.each_with_index do |uri, index|
+       # one sad request per step
+       send_request(render_template(template), uri, nil, methods[index])
+     end
  
-    uris.each_with_index do |uri, index|
-      # one timeout request per step
-      send_request(render_template(template), uri, DELAY, methods[index])
-    end
+     uris.each_with_index do |uri, index|
+       # one timeout request per step
+       send_request(render_template(template), uri, DELAY, methods[index])
+     end
+
+     return
   end
+
+  # array indexes start from 0
+  i = STEP_NO - 1
+  # one sad request
+  send_request(render_template(template), uris[i], nil, methods[i])
+  # one delay request
+  send_request(render_template(template), uris[i], DELAY, methods[i])
 end
 
 run
