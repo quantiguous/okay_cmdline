@@ -1,0 +1,3 @@
+POST, /inyes/v1/oauth/request/token
+POST, /inyes/v1/oauth/access/token
+PUT, /inyes/v1/users/wallets/cards/{id}/pins

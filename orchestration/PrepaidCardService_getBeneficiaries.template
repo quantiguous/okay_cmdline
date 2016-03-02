@@ -1,0 +1,11 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:getBeneficiaries>
+         <ser:version>1</ser:version>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:mobileNo>1455946324</ser:mobileNo>
+         <ser:numBeneficiaries>3</ser:numBeneficiaries>
+      </ser:getBeneficiaries>
+   </soap:Body>
+</soap:Envelope>

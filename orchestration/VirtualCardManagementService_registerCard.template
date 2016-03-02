@@ -22,7 +22,7 @@
             <ser:postalCode>222002</ser:postalCode>
          </ser:address>
          <ser:emailID>{{emailID}}</ser:emailID>
-         <ser:password>neha1993</ser:password>
+         <ser:password>cYLUtb2YJHPBhS4hXhHL0g==--0cPpkoLVQ/79wzqiL+MGxg==</ser:password>
       </ser:registerCard>
    </soap:Body>
 </soap:Envelope>

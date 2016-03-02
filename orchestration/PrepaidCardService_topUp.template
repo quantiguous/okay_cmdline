@@ -1,0 +1,16 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:topUp>
+         <ser:version>1</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:mobileNo>1455946324</ser:mobileNo>
+         <!--Optional:-->
+         <ser:encryptedPIN>338BE5673C6B86CF</ser:encryptedPIN>
+         <ser:billerID>VODAFONPRE</ser:billerID>
+         <ser:subscriberID>987878787876</ser:subscriberID>
+         <ser:topupAmount>100</ser:topupAmount>
+      </ser:topUp>
+   </soap:Body>
+</soap:Envelope>

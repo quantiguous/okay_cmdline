@@ -1,14 +1,14 @@
 <soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
    <soap:Header/>
    <soap:Body>
-      <ser:loadCard>
+      <ser:addBeneficiary>
          <ser:version>1</ser:version>
          <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
          <ser:appID>{{appid}}</ser:appID>
-         <ser:customerID>2424</ser:customerID>
-         <ser:debitAccountNo>000190600002003 </ser:debitAccountNo>
-         <ser:mobileNo>1455886169</ser:mobileNo>
-         <ser:loadAmount>100</ser:loadAmount>
-      </ser:loadCard>
+         <ser:mobileNo>8989898989</ser:mobileNo>
+         <ser:beneficiaryName>neha</ser:beneficiaryName>
+         <ser:beneficiaryAccountNo>0987654567898765</ser:beneficiaryAccountNo>
+         <ser:beneficiaryIFSC>HDFC0989898</ser:beneficiaryIFSC>
+      </ser:addBeneficiary>
    </soap:Body>
 </soap:Envelope>

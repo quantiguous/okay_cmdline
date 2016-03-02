@@ -1,0 +1,16 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:payToContact>
+         <ser:version>1</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:mobileNo>1456304907</ser:mobileNo>
+         <!--Optional:-->
+           <ser:encryptedPIN>338BE5673C6B86CF</ser:encryptedPIN>
+         <ser:contactName>neha</ser:contactName>
+         <ser:contactMobileNo>1456483825</ser:contactMobileNo>
+         <ser:transferAmount>100</ser:transferAmount>
+      </ser:payToContact>
+   </soap:Body>
+</soap:Envelope>
