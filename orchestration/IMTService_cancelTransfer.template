@@ -1,0 +1,13 @@
+<soap:Envelope xmlns:soap='http://www.w3.org/2003/05/soap-envelope' xmlns:ser='http://www.quantiguous.com/services'>
+  <soap:Header/>
+  <soap:Body>
+    <ser:cancelTransfer>
+      <ser:version>1</ser:version>
+      <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+      <ser:appID>{{appid}}</ser:appID>
+      <ser:customerID>2424</ser:customerID>
+      <ser:initiateTransferRequestNo>2AED1443C6364735B5FF2B57E1590B64</ser:initiateTransferRequestNo>
+      <ser:reasonToCancel>qfewefw</ser:reasonToCancel>
+    </ser:cancelTransfer>
+  </soap:Body>
+</soap:Envelope>

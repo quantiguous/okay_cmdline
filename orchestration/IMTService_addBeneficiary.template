@@ -1,0 +1,18 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:addBeneficiary>
+         <ser:version>1</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:customerID>2424</ser:customerID>
+         <ser:beneficiaryMobileNo>9878787878</ser:beneficiaryMobileNo>
+         <ser:beneficiaryName>nehawkjdhwejkd</ser:beneficiaryName>
+         <ser:beneficiaryAddress>
+            <ser:addressLine>sjdx</ser:addressLine>
+            <ser:cityName>wjbkdx</ser:cityName>
+            <ser:postalCode>222001</ser:postalCode>
+         </ser:beneficiaryAddress>
+      </ser:addBeneficiary>
+   </soap:Body>
+</soap:Envelope>

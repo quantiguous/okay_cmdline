@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:initiateTransfer>
+         <ser:version>1</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:customerID>2424</ser:customerID>
+         <ser:beneficiaryMobileNo>9878787878</ser:beneficiaryMobileNo>
+         <ser:transferAmount>1000</ser:transferAmount>
+         <ser:passCode>3456</ser:passCode>
+         <ser:remitterToBeneficiaryInfo>test</ser:remitterToBeneficiaryInfo>
+      </ser:initiateTransfer>
+   </soap:Body>
+</soap:Envelope>
