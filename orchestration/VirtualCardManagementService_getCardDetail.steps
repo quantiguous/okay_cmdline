@@ -1,2 +1,4 @@
-GET, /inyes/v1/users/wallets/cards
+POST, /inyes/v1/oauth/request/token
+POST, /inyes/v1/oauth/access/token
+GET, /inyes/v1/users/wallets/cards/{id}
 GET, /inyes/v1/users/wallets/cards/{id}/securities/tokens

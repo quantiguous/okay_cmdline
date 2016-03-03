@@ -5,9 +5,9 @@
          <ser:version>1</ser:version>
          <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
          <ser:appID>{{appid}}</ser:appID>
-         <ser:userUID>55ae08cb41059e45b9da9dfab788b236</ser:userUID>
-         <ser:emailID>1456144097@quantiguous.com</ser:emailID>
-         <ser:password>neha1993</ser:password>
+         <ser:userUID>4d31c1d65304ac3b9b6587cfdeea0eb1</ser:userUID>
+         <ser:emailID>nehaupadhya61y@gmail.com</ser:emailID>
+         <ser:password>bnmkj123</ser:password>
       </ser:blockCard>
    </soap:Body>
 </soap:Envelope>

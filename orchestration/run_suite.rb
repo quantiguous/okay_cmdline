@@ -12,11 +12,11 @@ STEP_NO = ARGV[0].to_i
 SERVICE_NAME = ARGV[1]
 OPERATION_NAME = ARGV[2]
 
-URL = 'http://10.211.55.9:7800/' + SERVICE_NAME
+URL = 'http://10.211.55.5:7080/' + SERVICE_NAME
 
 FILE_NAME = SERVICE_NAME + '_' + OPERATION_NAME
 
-DELAY = 35
+DELAY = 32
 
 BASIC_AUTH_USERNAME = ''
 BASIC_AUTH_PASSWORD = ''
@@ -97,6 +97,11 @@ def run
   steps.each do |step|
     methods << step.split(',')[0]
     uris << step.split(',')[1]
+  end
+  # only happy request
+  if STEP_NO == -1
+     send_request(render_template(template))
+     return
   end
 
   if STEP_NO == 0
