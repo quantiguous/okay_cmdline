@@ -60,14 +60,13 @@ def load_steps
 end
 
 
-def set_headers(req, uri, delay, method, step_no)
+def set_headers(req, uri, delay, step_no)
    req.headers['Content-Type'] = 'application/xml'
    req.headers['Accept'] = 'application/xml'
    req.headers['X-QG-CI-SVC'] = SERVICE_NAME
    unless uri.nil?
      req.headers['X-QG-CI-URI'] = uri
      req.headers['X-QG-CI-SCENARIO'] = 'SAD'
-     req.headers['X-QG-CI-METHOD'] = method
    end 
    unless delay.nil?
      req.headers['X-QG-CI-DELAY'] = delay.to_s
@@ -75,7 +74,7 @@ def set_headers(req, uri, delay, method, step_no)
    end
 end
 
-def send_request(template, step = nil, delay = nil, method = nil, step_no = nil)
+def send_request(template, step = nil, delay = nil, step_no = nil)
     conn = Faraday.new(:url => URL, :ssl => {:verify => false}) do |c|
       c.use Faraday::Request::UrlEncoded
       c.use Faraday::Request::BasicAuthentication, BASIC_AUTH_USERNAME, BASIC_AUTH_PASSWORD
@@ -83,7 +82,7 @@ def send_request(template, step = nil, delay = nil, method = nil, step_no = nil)
       c.use Faraday::Adapter::NetHttp
     end
     response = conn.post do |req|
-       set_headers(req, step, delay, method, step_no)
+       set_headers(req, step, delay, step_no)
 
        req.body = template
     end
@@ -93,12 +92,6 @@ end
 def run
   template = load_template
   steps = load_steps
-  methods = []
-  uris = []
-  steps.each do |step|
-    methods << step.split(',')[0]
-    uris << step.split(',')[1]
-  end
   # only happy request
   if STEP_NO == -1
      send_request(render_template(template))
@@ -109,14 +102,14 @@ def run
      # one happy request
      send_request(render_template(template))
   
-     uris.each_with_index do |uri, index|
+     steps.each_with_index do |step, index|
        # one sad request per step
-       send_request(render_template(template), uri, nil, methods[index], nil)
+       send_request(render_template(template), step, nil)
      end
  
-     uris.each_with_index do |uri, index|
+     steps.each_with_index do |step, index|
        # one timeout request per step
-       send_request(render_template(template), uri, DELAY, methods[index], index+1)
+       send_request(render_template(template), step, DELAY, index+1)
      end
 
      return
@@ -125,9 +118,9 @@ def run
   # array indexes start from 0
   i = STEP_NO - 1
   # one sad request
-  send_request(render_template(template), uris[i], nil, methods[i])
+  send_request(render_template(template), steps[i], nil)
   # one delay request
-  send_request(render_template(template), uris[i], DELAY, methods[i], STEP_NO)
+  send_request(render_template(template), steps[i], DELAY, STEP_NO)
 end
 
 run

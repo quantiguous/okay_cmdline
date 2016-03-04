@@ -1,2 +1,2 @@
-POST, /ESB/Service.svc
-POST, /ESB/Service.svc2
+/ESB/Service.svc
+/ESB/Service.svc2

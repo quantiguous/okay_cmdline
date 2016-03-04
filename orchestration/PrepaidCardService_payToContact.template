@@ -5,7 +5,7 @@
          <ser:version>1</ser:version>
          <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
          <ser:appID>{{appid}}</ser:appID>
-         <ser:mobileNo>1456304907</ser:mobileNo>
+         <ser:mobileNo>9831332564</ser:mobileNo>
          <!--Optional:-->
            <ser:encryptedPIN>338BE5673C6B86CF</ser:encryptedPIN>
          <ser:contactName>neha</ser:contactName>

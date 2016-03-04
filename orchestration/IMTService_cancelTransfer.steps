@@ -1,2 +1,2 @@
-POST, /eibm/EmpaysTransactionService
-POST, /flexcubeQ
+/eibm/EmpaysTransactionService
+/flexcubeQ

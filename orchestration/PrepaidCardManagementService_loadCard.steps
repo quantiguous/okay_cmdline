@@ -1,3 +1,3 @@
-POST, /flexcube
-POST, /inyes/v1/users/wallets/funds
-POST, /consumer/users/wallet/funds/{id}
+/flexcube
+/inyes/v1/users/wallets/funds
+/consumer/users/wallet/funds/{id}

@@ -1,1 +1,1 @@
-DELETE, /inyes/v1/users/{id}
+/inyes/v1/users/{id}

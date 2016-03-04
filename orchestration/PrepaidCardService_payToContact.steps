@@ -1,10 +1,10 @@
-POST, /inyes/v1/oauth/request/token
-POST, /inyes/v1/oauth/access/token
-PUT, /inyes/v1/users/wallets/cards/{id}/pins
-POST, /inyes/v1/oauth/request/token2
-POST, /inyes/v1/oauth/access/token2
-POST, /inyes/v1/users/wallets/funds
-POST, /inyes/v1/oauth/request/token3
-POST, /inyes/v1/oauth/access/token3
-PUT, /inyes/v1/users/wallets/funds/{id}
-POST, /flexcubeQ
+/inyes/v1/oauth/request/token
+/inyes/v1/oauth/access/token
+/inyes/v1/users/wallets/cards/{id}/pins
+/inyes/v1/oauth/request/token2
+/inyes/v1/oauth/access/token2
+/inyes/v1/users/wallets/funds
+/inyes/v1/oauth/request/token3
+/inyes/v1/oauth/access/token3
+/inyes/v1/users/wallets/funds/{id}
+/flexcubeQ

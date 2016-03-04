@@ -1,3 +1,3 @@
-POST, /inyes/v1/oauth/request/token
-POST, /inyes/v1/oauth/access/token
-GET, /inyes/v1/users/wallets/cards
+/inyes/v1/oauth/request/token
+/inyes/v1/oauth/access/token
+/inyes/v1/users/wallets/cards
