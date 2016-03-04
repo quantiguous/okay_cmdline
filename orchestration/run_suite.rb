@@ -60,7 +60,7 @@ def load_steps
 end
 
 
-def set_headers(req, uri, delay, method)
+def set_headers(req, uri, delay, method, step_no)
    req.headers['Content-Type'] = 'application/xml'
    req.headers['Accept'] = 'application/xml'
    req.headers['X-QG-CI-SVC'] = SERVICE_NAME
@@ -71,10 +71,11 @@ def set_headers(req, uri, delay, method)
    end 
    unless delay.nil?
      req.headers['X-QG-CI-DELAY'] = delay.to_s
+     req.headers['X-QG-CI-DELAY-STEP'] = step_no.to_s
    end
 end
 
-def send_request(template, step = nil, delay = nil, method = nil)
+def send_request(template, step = nil, delay = nil, method = nil, step_no = nil)
     conn = Faraday.new(:url => URL, :ssl => {:verify => false}) do |c|
       c.use Faraday::Request::UrlEncoded
       c.use Faraday::Request::BasicAuthentication, BASIC_AUTH_USERNAME, BASIC_AUTH_PASSWORD
@@ -82,7 +83,7 @@ def send_request(template, step = nil, delay = nil, method = nil)
       c.use Faraday::Adapter::NetHttp
     end
     response = conn.post do |req|
-       set_headers(req, step, delay, method)
+       set_headers(req, step, delay, method, step_no)
 
        req.body = template
     end
@@ -110,12 +111,12 @@ def run
   
      uris.each_with_index do |uri, index|
        # one sad request per step
-       send_request(render_template(template), uri, nil, methods[index])
+       send_request(render_template(template), uri, nil, methods[index], nil)
      end
  
      uris.each_with_index do |uri, index|
        # one timeout request per step
-       send_request(render_template(template), uri, DELAY, methods[index])
+       send_request(render_template(template), uri, DELAY, methods[index], index+1)
      end
 
      return
@@ -126,7 +127,7 @@ def run
   # one sad request
   send_request(render_template(template), uris[i], nil, methods[i])
   # one delay request
-  send_request(render_template(template), uris[i], DELAY, methods[i])
+  send_request(render_template(template), uris[i], DELAY, methods[i], STEP_NO)
 end
 
 run
