@@ -6,10 +6,10 @@
          <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
          <ser:appID>{{appid}}</ser:appID>
          <ser:customerID>2424</ser:customerID>
-         <ser:debitAccountNo>2134567890</ser:debitAccountNo>
+         <ser:debitAccountNo>001490200038020</ser:debitAccountNo>
          <ser:billerAccountNo>RTBBL220</ser:billerAccountNo>
          <ser:billID>123</ser:billID>
-         <ser:billAmount>123</ser:billAmount>
+         <ser:billAmount>3</ser:billAmount>
       </ser:payBill>
    </soap:Body>
 </soap:Envelope>
