@@ -1,0 +1,23 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:payToBiller>
+         <ser:version>1.0</ser:version>
+         <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:customerID>2424</ser:customerID>
+         <ser:debitAccountNo>1234567890</ser:debitAccountNo>
+         <ser:billerCode>AIRTELBB</ser:billerCode>
+         <ser:parametersArray>
+            <!--0 to 5 repetitions:-->
+            <ser:parameter>
+               <ser:parameterNo>1</ser:parameterNo>
+               <ser:parameterValue>1234567890</ser:parameterValue>
+            </ser:parameter>
+         </ser:parametersArray>
+         <ser:paymentDetail>
+            <ser:paymentAmount>1000</ser:paymentAmount>
+         </ser:paymentDetail>
+      </ser:payToBiller>
+   </soap:Body>
+</soap:Envelope>

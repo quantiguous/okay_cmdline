@@ -1,0 +1,15 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+  <soap:Header/>
+  <soap:Body>
+     <ser:getAllBills>
+        <ser:uniqueRequestNo>{% uuid %}</ser:uniqueRequestNo>
+        <ser:appID>{{appid}}</ser:appID>
+        <ser:version>1</ser:version>
+        <ser:customerID>2424</ser:customerID>
+        <ser:criteria>
+           <ser:allBills>true</ser:allBills><ser:billStatus>UNPAID</ser:billStatus>
+        </ser:criteria>
+        <ser:numBills>2</ser:numBills>
+     </ser:getAllBills>
+  </soap:Body>
+</soap:Envelope>

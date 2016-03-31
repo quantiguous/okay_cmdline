@@ -1,0 +1,19 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ser="http://www.quantiguous.com/services">
+   <soap:Header/>
+   <soap:Body>
+      <ser:getAllBillPayments>
+         <ser:version>1</ser:version>
+         <ser:appID>{{appid}}</ser:appID>
+         <ser:customerID>2424</ser:customerID>
+         <ser:criteria>
+            <!--You have a CHOICE of the next 3 items at this level-->
+           
+           
+            
+            <!--You have a CHOICE of the next 2 items at this level-->
+            <ser:billerAccountNo>RTBBL221</ser:billerAccountNo><ser:last5Payments>true</ser:last5Payments>
+            
+         </ser:criteria>
+      </ser:getAllBillPayments>
+   </soap:Body>
+</soap:Envelope>
